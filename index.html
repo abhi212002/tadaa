@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>boo menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+
+        <section>
+            <img src="asdfg.jpg" id="bg">
+            <img src="moon.png" id="moon">
+            <img src="mountain.png" id="mountain">
+            <img src="7.png" id="road1">
+            <img src="road.png" id="road">
+            <h2 id="text">IEEE TEMS</h2>
+        </section>
+        <script>
+            let bg = document.getElementById("bg");
+            let moon = document.getElementById("moon");
+            let mountain = document.getElementById("mountain");
+            let road = document.getElementById("road");
+            let text = document.getElementById("text");
+
+            window.addEventListener('scroll',function(){
+                var value=window.scrollY;
+                bg.style.top=value*0.5+'px';
+                moon.style.left=-value*0.5+'px';
+                mountain.style.top=-value*0.15+'px';
+                text.style.top=value*1+'px';
+               
+            })
+        </script>
+
+        
+        <div class="navigation">
+            <div class="toggle"></div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></i></span>
+                        <span class="title">Squad</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></i></span>
+                        <span class="title">Events</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index3.html">
+                        <span class="icon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+                        <span class="title">Gallery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-eercast" aria-hidden="true"></i></span>
+                        <span class="title">Coordinators</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-meetup" aria-hidden="true"></i></span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hi.html">
+                        <span class="icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+                        <span class="title" > Connect</span>
+                        <!--<a href="hi.html"></a>-->
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+       
+        <script>
+            const navigation = document.querySelector('.navigation');
+            document.querySelector('.toggle').onclick=function(){
+                this.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( ".navigation" ).draggable();
+        } );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index3</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+    <body>
+        <h1>The Journey</h1>
+        <section>    
+            <ul>
+                <li class="list active" data-filter="All">All</li>
+                <li class="list" data-filter="Gravitas">Gravitas</li>
+                <li class="list" data-filter="ClassroomSessions">Classroom Sessions</li>
+                <li class="list" data-filter="OutreachProgram">Outreach Program</li>
+                <li class="list" data-filter="QuizWinners">Quiz Winners</li>
+            </ul>
+        
+            <div class="gallery">
+                <div class="itembox Gravitas"><img src="gravitas1.jpg"></div>
+                <div class="itembox Gravitas"><img src="gravitas2.jpg"></div>
+                <div class="itembox Gravitas"><img src="gravitas3.jpg"></div>
+                <div class="itembox ClassroomSessions"><img src="classroomsessions1.jpg"></div>
+                <div class="itembox ClassroomSessions"><img src="classroomsessions2.jpg"></div>
+                <div class="itembox ClassroomSessions"><img src="classroomsessions3.jpg"></div>
+                <div class="itembox ClassroomSessions"><img src="classroomsessions4.jpg"></div>
+                <div class="itembox OutreachProgram"><img src="outreachprogram2.jpg"></div>
+                <div class="itembox OutreachProgram"><img src="outreachprogram3.jpg"></div>
+                <div class="itembox OutreachProgram"><img src="outreachprogram4.jpg"></div>
+                <div class="itembox OutreachProgram"><img src="outreachprogram5.jpg"></div>
+                <div class="itembox OutreachProgram"><img src="outreachprogram6.jpg"></div>
+                <div class="itembox OutreachProgram"><img src="outreachprogram1.jpg"></div>
+                <div class="itembox QuizWinners"><img src="quizwinner1.jpg"></div>
+                <div class="itembox QuizWinners"><img src="quizwinner2.jpg"></div>
+                <div class="itembox QuizWinners"><img src="quizwinner3.jpg"></div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if (value == 'all'){
+                    $('.itembox').show('1000');
+
+                }
+                else{
+                    $('.itembox').not('.'+value).hide('1000');
+                    $('.itembox').filter('.'+value).show('1000');
+                }
+            })
+            $('.list').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
+        </script>
+    </body>
+</html>
